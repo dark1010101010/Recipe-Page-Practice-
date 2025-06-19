@@ -22,6 +22,7 @@
     display: block;
     border-radius: var(--spacing-20);
     margin-bottom: var(--spacing-35);
+    margin-top: var(--spacing-30);
   }
 
   body {
@@ -118,6 +119,7 @@
 @layer section-recipe {
   .section-recipe {
     margin-bottom: 0px;
+    margin-top: 0;
   }
 
   .recipe-description {
