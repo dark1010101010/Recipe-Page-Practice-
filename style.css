@@ -1,0 +1,313 @@
+@layer global {
+  @font-face {
+    font-family: "Outfit";
+    src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf);
+    font-weight: 400 500;
+  }
+
+  @font-face {
+    font-family: "YoungSerif";
+    src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf);
+    font-weight: 100 400 500 600 700;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+    border-radius: var(--spacing-20);
+    margin-bottom: var(--spacing-35);
+  }
+
+  body {
+    background-color: var(--creame-150);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  main {
+    max-width: 779px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--spacing-30);
+    padding: var(--spacing-10) var(--spacing-50);
+    border-radius: var(--spacing-20);
+    background-color: var(--white);
+  }
+
+  section {
+    margin: var(--spacing-25) 0px;
+  }
+}
+
+@layer colors {
+  :root {
+    --white: hsl(0, 0%, 100%);
+    --creame-100: hsl(30, 54%, 90%);
+    --creame-150: hsl(30, 18%, 87%);
+    --creame-600: hsl(30, 10%, 34%);
+    --creame-900: hsl(24, 5%, 18%);
+    --brown-800: hsl(14, 45%, 36%);
+    --rose-800: hsl(332, 51%, 32%);
+    --rose-50: hsl(330, 100%, 98%);
+
+    --spacing-50: 50px;
+    --spacing-45: 45px;
+    --spacing-40: 40px;
+    --spacing-35: 35px;
+    --spacing-30: 30px;
+    --spacing-25: 25px;
+    --spacing-20: 20px;
+    --spacing-15: 15px;
+    --spacing-10: 10px;
+  }
+}
+
+@layer font-presets {
+  h1 {
+    font-family: 'YoungSerif';
+    font-weight: 100;
+    color: var(--creame-900);
+    font-size: 2.6rem;
+  }
+
+  h2 {
+    font-family: 'YoungSerif';
+    font-weight: 400;
+    color: var(--brown-800);
+    font-size: 1.7rem;
+  }
+
+  h3 {
+    font-family: 'Outfit';
+    font-weight: 600;
+    color: var(--rose-800);
+    margin-bottom: var(--spacing-15);
+  }
+  
+  p {
+    font-family: 'Outfit';
+    color: var(--creame-600);
+  }
+
+ li {
+    font-family: 'Outfit';
+    color: var(--creame-600);
+  }
+
+  hr {
+    border: none;
+    height: 1.1px;
+    background-color: var(--creame-150);
+  }
+
+  .nutrition-container > span {
+    font-family: 'Outfit';
+    color: var(--creame-600);
+  }
+}
+
+@layer section-recipe {
+  .section-recipe {
+    margin-bottom: 0px;
+  }
+
+  .recipe-description {
+    margin: var(--spacing-30) 0px;
+    line-height: var(--spacing-25);
+  }
+
+  .section-recipe > div {
+    background-color: var(--rose-50);
+    padding: var(--spacing-25) ;
+    border-radius: var(--spacing-15);
+  }
+
+  .section-recipe > div > ul {
+    margin: var(--spacing-10) 0px 0px var(--spacing-20);
+  } 
+
+  .section-recipe > div > ul > li {
+    margin-bottom: var(--spacing-15);
+  }
+
+  .section-recipe > div > ul > li::marker {
+    font-size: 12px;
+  }
+
+  .section-recipe > div > ul > li > p {
+    margin-left: var(--spacing-20);
+  }
+  
+  .section-recipe > div > ul > li > p > span {
+    font-weight: 600;
+  }
+
+  .section-recipe > div > ul > li:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@layer section-ingredients {
+
+  .section-ingredients > h2 {
+    margin-bottom: var(--spacing-15);
+  }
+
+  .section-ingredients > ul {
+    margin-left: var(--spacing-10);
+  }
+
+  .section-ingredients > ul > li::marker {
+    font-size: 12px;
+  }
+  
+  .section-ingredients > ul > li {
+    margin: var(--spacing-15);
+  }
+
+  .section-ingredients > ul > li > p {
+    margin-left: var(--spacing-20);
+  }
+
+  .section-ingredients > ul > li:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+@layer section-instructions {
+  .section-instructions > h2 {
+    margin-bottom: var(--spacing-15);
+  }
+
+  .section-instructions > ol {
+    margin-left: var(--spacing-10);
+  }
+
+  .section-instructions > ol > li {
+    margin: var(--spacing-15);
+  }
+
+  .section-instructions > ol > li::marker {
+    font-weight: 600;
+  }
+
+  .section-instructions > ol > li:last-child {
+    margin-bottom: var(--spacing-10);
+  }
+
+  .section-instructions > ol > li > p {
+    margin-left:  var(--spacing-20);
+  }
+
+  .section-instructions > ol > li > p > span {
+    font-weight: 600;
+  }
+}
+
+@layer section-nutrition {
+  .section-nutrition > h2 {
+    margin-bottom: var(--spacing-20);
+  }
+
+  .section-nutrition > .container {
+    padding: var(--spacing-30) 0px var(--spacing-10) 0px;
+  }
+
+  .section-nutrition > .container > hr {
+    margin: var(--spacing-20) 0;
+  }
+
+  .section-nutrition > .container > .nutrition-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .section-nutrition > .container > .nutrition-container > div {
+    width: 300px;
+  }
+
+  .section-nutrition > .container > .nutrition-container > div:nth-of-type(1) > p {
+    margin-left: var(--spacing-30);
+  }
+
+  .section-nutrition > .container > .nutrition-container > div:nth-of-type(2) > p{
+    color: var(--brown-800);
+    font-weight: 700;
+  }
+
+  .section-nutrition > .container > .nutrition-container > div:nth-of-type(2) {
+    margin-right: var(--spacing-40);
+  }
+
+}
+
+@layer medias {
+  @media (width <= 749px) {
+
+    main {
+      width: 100%;
+      padding: var(--spacing-10);
+    }
+
+    .section-recipe {
+      margin-top: 0;
+    }
+
+  .section-nutrition > .container > .nutrition-container > div:nth-of-type(2) {
+    margin-right: 0;
+  }
+
+  hr {
+    width: 90%;
+    align-self: center;
+  }
+
+}
+
+  @media (width <= 555px) {
+    main {
+      padding: 0;
+      margin: 0;
+      border-radius: 0;
+    }
+
+    section {
+      margin: var(--spacing-20);
+      margin-right: var(--spacing-15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+    }
+
+     img {
+      border-radius: 0;
+      object-fit: contain;
+    }
+  }
+
+}
+
+.attribution {
+  font-family: 'Outfit';
+}
+
+.attribution > a {
+  text-decoration: none;
+  color: var(--brown-800);
+}
